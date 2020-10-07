@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="" href=""> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <div>
+      <ul class="li" >
+        <li> <a href="/">home</a> </li>
+        <li> <a href="/">home </a> </li>
+      </ul>
+    </div>
+    <div class="lines"> </div>
+      <title>Password generator</title>
+  </head>
+  <body>
+    <div> <h1> Generate password </h1> </div>
+    <div class="lines"></div>
+    <div class="divclass" >
+      <label  id="pwdlen" > password length </label>
+      <input  id="textInput" type="text" value="0" >  </input>
+      <button id="genbtn" href="/" onclick="hello()" >Generate password</button>
+    </div>
+    <div>
+        <script>
+          password="";
+          i=1;
+          m=i;
+          var passlen = prompt("enter the length of the password");
+          console.log( passlen.value);
+          function hello( ){
+            max =  Math.floor(26);
+            while ( m+i < passlen-2) {
+              random = Math.floor(Math.random( ) * Math.floor( 26));
+              if( password.length %2 ==0){
+                  password += String.fromCharCode('a'.charCodeAt(0)+random);
+              }
+              else{
+                  password += String.fromCharCode('A'.charCodeAt(0)+random);
+              }
+                m = m + 1;
+            }
+            random = Math.floor(Math.random() * Math.floor(5));
+            password += '$';
+            random = Math.floor(Math.random() * Math.floor(8));
+            password += '$';
+            console.log(password);
+            password = "";
+            m="".length;
+            // document.write(password);
+          }
+        </script>
+    </div>
+      <!-- <script type="javascript" src="js.js> -->
+      <!-- </script> -->
+      <!-- </div> -->
+
+  </body>
+  <footer>
+    <h3>@password</h3>
+  </footer>
+</html>
